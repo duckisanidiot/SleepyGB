@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.1)
 project(sleepygb)
 include_directories(include)
 file(GLOB SOURCES "src/*.cpp")

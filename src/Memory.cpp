@@ -27,7 +27,7 @@ namespace gb {
 		}
 	}
 
-	uint16_t Memory::Write16(uint16_t addr, uint16_t data) {
+	void Memory::Write16(uint16_t addr, uint16_t data) {
 		Write8(addr, data & 0xFF);
 		Write8(addr + 1, data >> 8);
 	}

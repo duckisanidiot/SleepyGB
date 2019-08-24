@@ -24,7 +24,7 @@ namespace gb {
 		uint8_t Read8(uint16_t addr);
 		uint16_t Read16(uint16_t addr);
 		void Write8(uint16_t addr, uint8_t data);
-		uint16_t Write16(uint16_t addr, uint16_t data);
+		void Write16(uint16_t addr, uint16_t data);
 
 		int MapMemory(MemoryRegion m);
 		void UnmapMemory(int id);
