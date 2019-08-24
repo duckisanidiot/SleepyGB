@@ -21,7 +21,7 @@ namespace gb {
 	void Memory::Write8(uint16_t addr, uint8_t data) {
 		for (MemoryRegion r : mapped) {
 			if (r.start <= addr && addr <= r.end) {
-				r.write(addr);
+				r.write(addr, data);
 				break;
 			}
 		}
