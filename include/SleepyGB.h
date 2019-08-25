@@ -43,7 +43,16 @@ namespace gb {
 	// this is so bad
 	class CPU {
 		Memory *mem;
+		
+		struct Opcode {
+			std::function<void(CPU *, Memory *, uint8_t)> function;
+			uint8_t mask, comp;
+		};
 
+		std::vector<Opcode> opcodes;
+		void AddOpcode(const std::string &fmt, std::function<void(CPU *, Memory *, uint8_t)> func);
+		Opcode FindOpcode(uint8_t op);
+	
 	public:
 		union {
 			uint16_t af, bc, de, hl;
